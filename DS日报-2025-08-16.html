@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>群聊日报 2025-08-16</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6C9T7FPDT2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6C9T7FPDT2');
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            font-family: 'Inter', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .bento-card {
+            background-color: #ffffff;
+            border: 1px solid #e9e9eb;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.05);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .bento-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.07), 0 4px 6px -4px rgba(0,0,0,0.05);
+            transform: translateY(-3px);
+        }
+
+        .number-display {
+            font-weight: 900;
+            font-size: 4rem;
+            line-height: 1;
+        }
+
+        .section-title {
+            font-weight: 800;
+            font-size: 2.25rem;
+            color: #000000;
+            margin-bottom: 2rem;
+        }
+
+        .tag-item {
+            background-color: rgba(77, 107, 254, 0.1);
+            color: #4D6BFE;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .expandable-content {
+            position: relative;
+        }
+
+        .content-preview.collapsed {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .content-preview.collapsed::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 30px;
+            background: linear-gradient(transparent, rgba(248, 250, 252, 0.9));
+            pointer-events: none;
+        }
+
+        .expand-btn {
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            background: none;
+            padding: 0;
+        }
+
+        .expand-btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .expand-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .expand-btn.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-white text-black min-h-screen">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+        <header class="w-full mb-8">
+            <div class="bento-card p-8">
+                <div class="text-center">
+                    <h1 class="text-5xl font-black text-black mb-6">
+                        群聊日报
+                    </h1>
+                    <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-lg mb-4">
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-calendar-alt mr-2 text-[#4D6BFE]"></i>
+                            <span id="report-date">2025年8月16日</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-clock mr-2 text-[#4D6BFE]"></i>
+                            <span>08:25 - 21:56</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="w-full mb-12">
+            <h2 class="section-title">
+                一、总消息概览
+            </h2>
+            <div class="bento-card p-8 bg-gradient-to-br from-[#4D6BFE]/20 via-[#4D6BFE]/10 to-[#4D6BFE]/5 text-center rounded-2xl">
+                <div class="number-display text-[#4D6BFE]">
+                    300+
+                </div>
+                <p class="text-xl font-semibold text-black mt-3">总消息数量</p>
+            </div>
+        </section>
+
+        <section class="w-full mb-12">
+            <h2 class="section-title">
+                二、火花碰撞时刻・热点话题
+            </h2>
+            <div class="space-y-8">
+                <div class="bento-card p-6 rounded-xl">
+                    <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
+                        <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
+                            多子女养育与母乳喂养经验分享
+                        </h4>
+                        <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
+                            <i class="fas fa-clock mr-1.5 text-gray-500"></i>
+                            10:17 - 11:07
+                        </span>
+                    </div>
+
+                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
+                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
+                        <p class="text-sm text-purple-600 italic">
+                            "小满+女2022-5-21：的确，我二胎马上要临产了，很害怕二胎生下来之后我会对老大会疏忽"
+                        </p>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-item">多子女养育</span>
+                            <span class="tag-item">母乳喂养</span>
+                            <span class="tag-item">亲子关系</span>
+                            <span class="tag-item">爸爸参与</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">详细内容</p>
+                        <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
+                            <div class="expandable-content" data-char-limit="200">
+                                <div class="content-preview">
+                                    <b>一、话题背景与起因</b><br>小满妈妈提出二胎即将临产的焦虑，担心对老大疏忽，引发群内关于多子女养育和母乳喂养的深入讨论。<br><br><b>二、主要观点与讨论详情</b><br><b>西伯利亚小飞鼠</b>分享经验："前两个月，我和月嫂一起睡，把姐姐交给了队友，第三个月一家四口一起睡，即使把姐姐交出去，建议也是交给爸爸。"<br><br><b>小飞鼠</b>进一步建议："纯母乳最好了集美，纯母乳才是走哪都可以。母乳不止是奶粉不可复刻，更多的是婴儿会有充足的安全感。"<br><br><b>泥巴</b>提出："同时也需要爸爸参与进来（不过我对大部分爸爸的印象都是啥也不管"。<br><br><b>西伯利亚小飞鼠</b>给出具体方法："小婴儿的生存秘密，就是当人闻到他们的味道，抱到他们，婴儿会打开对方大脑里的杏仁体，从此婴儿的所有需求这个人都知道。"<br><br><b>三、结论与启发</b><br>多子女家庭中，父亲参与至关重要；母乳喂养不仅提供营养，更是建立亲子安全感的重要方式；兄弟姐妹从小建立联结对手足情有深远影响。
+                                </div>
+                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
+                                    <span class="expand-text">展开全文</span>
+                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
+                        <div class="space-y-6">
+                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                                <div class="mb-4">
+                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
+                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
+                                        <p class="text-black text-base">
+                                            母乳喂养远超营养供给，是建立婴儿安全感和发展基础的关键，对儿童期探索发育有深远影响。
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
+                                    <div class="space-y-2">
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <p class="text-gray-800 italic text-sm">
+                                                纯母乳才是走哪都可以，母乳不止是奶粉不可复刻，更多的是婴儿会有充足的安全感。
+                                            </p>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>西伯利亚小飞鼠</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <p class="text-gray-800 italic text-sm">
+                                                实际智商越高的哺乳动物，童年时间越长，需要母乳喂养的时间也更长。
+                                            </p>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>西伯利亚小飞鼠</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <p class="text-gray-800 italic text-sm">
+                                                延长哺乳时间，可以降低乳腺疾病的概率和风险。
+                                            </p>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>西伯利亚小飞鼠</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                                <div class="mb-4">
+                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
+                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
+                                        <p class="text-black text-base">
+                                            多子女家庭中，父亲参与和兄弟姐妹间的早期联结对家庭和谐与孩子成长至关重要。
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
+                                    <div class="space-y-2">
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <p class="text-gray-800 italic text-sm">
+                                                同时也需要爸爸参与进来，不过我对大部分爸爸的印象都是啥也不管。
+                                            </p>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>泥巴</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <p class="text-gray-800 italic text-sm">
+                                                多子女的养育中，把每一个孩子当作独生子女去看待，看到每个孩子当下或者某阶段的需求。
+                                            </p>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>西伯利亚小飞鼠</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <p class="text-gray-800 italic text-sm">
+                                                婴儿与家中的哥哥姐姐建立联结，会为后续的手足情打下结实的基础。
+                                            </p>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>西伯利亚小飞鼠</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bento-card p-6 rounded-xl">
+                    <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
+                        <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
+                            亲子关系与情绪管理
+                        </h4>
+                        <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
+                            <i class="fas fa-clock mr-1.5 text-gray-500"></i>
+                            08:25 - 10:01
+                        </span>
+                    </div>
+
+                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
+                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
+                        <p class="text-sm text-purple-600 italic">
+                            "独角仙+2020.2女+2022.4女：看到了星星妈妈的无力感了[拥抱][拥抱][拥抱]谈恋爱真的不用太紧张"
+                        </p>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-item">亲子关系</span>
+                            <span class="tag-item">情绪管理</span>
+                            <span class="tag-item">青少年教育</span>
+                            <span class="tag-item">接纳引导</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">详细内容</p>
+                        <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
+                            <div class="expandable-content" data-char-limit="200">
+                                <div class="content-preview">
+                                    <b>一、话题背景与起因</b><br>独角仙分享了对星星妈妈处境的理解，引发了对亲子关系特别是青少年期亲子沟通的讨论。<br><br><b>二、主要观点与讨论详情</b><br><b>星星妈妈</b>反思："我就是解决问题的，没有接纳和引导，导致孩子大了遇到问题听不进去大人的意见，很多时候他都以发脾气不沟通抗议。"<br><br><b>独角仙</b>提出核心观点："所以，关系先于教育。"<br><br><b>西伯利亚小飞鼠</b>补充："先联结再教导"，并进一步阐述："亲兄弟姐妹之间随着年龄增长，有一些纷争可能是隔夜未解决的，分别看到不同孩子的需求和情绪，他们就会被接住。"<br><br><b>西伯利亚小飞鼠</b>建议："提供情绪宣泄渠道，有组织的碰撞游戏就是很好的选择，枕头大战，床上摔跤等等，还有隔空扔卫生纸团对垒。"<br><br><b>三、结论与启发</b><br>良好的亲子关系是有效教育的前提；对于多子女家庭，需要分别关注每个孩子的需求；通过游戏和活动为孩子提供情绪宣泄渠道是有效的情绪管理方式。
+                                </div>
+                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
+                                    <span class="expand-text">展开全文</span>
+                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
+                        <div class="space-y-6">
+                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                                <div class="mb-4">
+                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
+                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
+                                        <p class="text-black text-base">
+                                            建立良好的亲子关系是先于教育的重要基础，关系质量直接影响到教育效果。
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
+                                    <div class="space-y-2">
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <p class="text-gray-800 italic text-sm">
+                                                我就是解决问题的，没有接纳和引导，导致孩子大了遇到问题听不进去大人的意见。
+                                            </p>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>星星妈妈</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <p class="text-gray-800 italic text-sm">
+                                                所以，关系先于教育。
+                                            </p>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>独角仙</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <p class="text-gray-800 italic text-sm">
+                                                先联结再教导。
+                                            </p>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>西伯利亚小飞鼠</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full mb-12">
+            <h2 class="section-title">
+                三、解惑一点通・有问必答
+            </h2>
+            <div class="space-y-8">
+                <div class="bento-card p-6 rounded-xl border-l-4 border-[#93c5fd]">
+                    <div class="mb-4">
+                        <h4 class="text-xl font-semibold text-black flex items-center">
+                            <i class="fas fa-question-circle mr-2.5 text-[#4D6BFE] text-lg"></i>
+                            如何选择适合的徒步鞋？
+                        </h4>
+                    </div>
+
+                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
+                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
+                        <p class="text-sm text-purple-600 italic">
+                            "独角仙+2020.2女+2022.4女：题外话，小飞鼠有没有推荐的徒步鞋，舒服的性价比高的"
+                        </p>
+                    </div>
+
+                    <div class="border-t border-gray-200 pt-4">
+                        <h5 class="text-lg font-semibold text-green-700 flex items-center mb-2">
+                            <i class="fas fa-lightbulb mr-2.5 text-lg text-green-600"></i>
+                            解答
+                        </h5>
+                        <div class="text-gray-700 text-base leading-relaxed prose prose-sm max-w-none">
+                            <div class="expandable-content" data-char-limit="200">
+                                <div class="content-preview">
+                                    <b>一、问题背景</b><br>独角仙在群内询问西伯利亚小飞鼠推荐舒适且性价比高的徒步鞋，预算在500元以内。<br><br><b>二、解决方案与建议</b><br><b>西伯利亚小飞鼠</b>推荐了亚瑟士(ASICS)的徒步鞋："平平无奇，四季穿，健身跑步轻量徒步都可。样子特别普通，但就是很耐看。"<br><br>她还分享了选购技巧："徒步选鞋需要买大半码或一码"，并展示了自己购买的亮色款式。<br><br>对于儿童徒步鞋，<b>西伯利亚小飞鼠</b>推荐了丘丘纳(Keens)的款式："小朋友推荐丘丘纳这双，遡溪登山都可，四季鞋。"<br><br>她还提醒："婴儿与家中的哥哥姐姐建立联结，会为后续的手足情打下结实的基础"，强调了共同户外活动对亲子关系的重要性。
+                                </div>
+                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
+                                    <span class="expand-text">展开全文</span>
+                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 pt-4 border-t border-gray-200">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-item">徒步装备</span>
+                            <span class="tag-item">户外活动</span>
+                            <span class="tag-item">儿童鞋款</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full mb-12">
+            <h2 class="section-title">
+                四、智慧火花匣・每日精选
+            </h2>
+            <div class="space-y-8">
+                <div class="bento-card p-6 rounded-xl border-l-4 border-[#93c5fd]">
+                    <h4 class="text-xl font-semibold text-black mb-3">
+                        婴幼儿视觉发展特点与训练方法
+                    </h4>
+
+                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
+                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
+                        <p class="text-sm text-purple-600 italic">
+                            "西伯利亚小飞鼠：三个月婴儿明确区分红和绿，对黄色混淆"
+                        </p>
+                    </div>
+
+                    <div class="text-gray-700 text-base mb-4 leading-relaxed prose prose-sm max-w-none">
+                        <div class="expandable-content" data-char-limit="200">
+                            <div class="content-preview">
+                                <b>一、推荐内容</b><br>西伯利亚小飞鼠分享了婴幼儿视觉发展的重要特点和有针对性的训练方法。<br><br><b>二、核心价值与特点</b><br><b>西伯利亚小飞鼠</b>详细解释："三个月婴儿明确区分红和绿，对黄色混淆。四个月婴儿完整感知三原色红黄蓝。三到四个月婴儿处于视力飞跃发展期，从模糊阶段飞跃至清晰立体彩色的世界。"<br><br>她提供了具体的视觉训练方法："三个月相当于成人600度近视，所以需要离他近一点做鬼脸，张嘴吐舌头，他们会模仿。四个月就可以玩'消失'游戏躲猫猫。"<br><br>还分享了实用的视觉训练游戏：<br>1. 光影魔术师（3月+）：手电筒罩红布照白墙，缓慢移动光点<br>2. 彩虹探险家（4月+）：三棱镜在阳光下制造彩虹，婴儿会用手拍打光影→发展空间定位感<br><br><b>三、适用场景或补充信息</b><br>这些方法适合0-6个月婴儿的视觉发展关键期，家长可以在日常互动中轻松实施，促进婴儿视觉和认知发展。
+                            </div>
+                            <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
+                                <span class="expand-text">展开全文</span>
+                                <i class="fas fa-chevron-down ml-1 expand-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tag-item">婴儿发展</span>
+                        <span class="tag-item">视觉训练</span>
+                        <span class="tag-item">早期教育</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="w-full mt-16">
+            <div class="bento-card p-8">
+                <div class="text-center text-gray-700 space-y-3">
+                    <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-base">
+                        <div class="flex items-center">
+                            <i class="fas fa-database mr-2 text-[#4D6BFE]"></i>
+                            <span>微信群聊记录</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-robot mr-2 text-[#4D6BFE]"></i>
+                            <span>2025-08-17 03:00:00</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed">
+                        本报告基于群聊数据自动生成，仅供参考。内容可能包含个人观点，不代表群组官方立场。数据处理过程中已尽量匿名化处理敏感信息。
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const numberElements = document.querySelectorAll('.number-display');
+            numberElements.forEach(element => {
+                const finalValueText = element.textContent.replace(/,/g, '');
+                const finalValue = parseInt(finalValueText, 10);
+
+                if (isNaN(finalValue)) return;
+
+                let currentValue = 0;
+                const duration = 1500;
+                const frameRate = 1000 / 60;
+                const totalFrames = Math.round(duration / frameRate);
+                const increment = finalValue / totalFrames;
+
+                let currentFrame = 0;
+                const timer = setInterval(() => {
+                    currentFrame++;
+                    currentValue += increment;
+
+                    if (currentFrame >= totalFrames) {
+                        currentValue = finalValue;
+                        clearInterval(timer);
+                    }
+                    element.textContent = Math.floor(currentValue).toLocaleString('en-US');
+                }, frameRate);
+            });
+
+            initExpandableContent();
+        });
+
+        function initExpandableContent() {
+            const expandableContents = document.querySelectorAll('.expandable-content');
+            
+            expandableContents.forEach(container => {
+                const charLimit = parseInt(container.getAttribute('data-char-limit')) || 200;
+                const contentPreview = container.querySelector('.content-preview');
+                const expandBtn = container.querySelector('.expand-btn');
+                
+                if (!contentPreview || !expandBtn) return;
+                
+                const fullContent = contentPreview.innerHTML;
+                const fullText = contentPreview.textContent || contentPreview.innerText;
+                
+                if (fullText.length > charLimit) {
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = fullContent;
+                    
+                    const truncatedText = fullText.substring(0, charLimit);
+                    
+                    let truncatedContent = '';
+                    let charCount = 0;
+                    
+                    const walker = document.createTreeWalker(
+                        tempDiv,
+                        NodeFilter.SHOW_TEXT,
+                        null,
+                        false
+                    );
+                    
+                    let node;
+                    const textNodes = [];
+                    while (node = walker.nextNode()) {
+                        textNodes.push(node);
+                    }
+                    
+                    for (let textNode of textNodes) {
+                        const text = textNode.textContent;
+                        if (charCount + text.length <= charLimit) {
+                            charCount += text.length;
+                        } else {
+                            const remainingChars = charLimit - charCount;
+                            textNode.textContent = text.substring(0, remainingChars) + '...';
+                            charCount = charLimit;
+                            
+                            let currentNodeToClearAfter = textNode;
+                            while (currentNodeToClearAfter && currentNodeToClearAfter !== tempDiv) {
+                                let sibling = currentNodeToClearAfter.nextSibling;
+                                while (sibling) {
+                                    const nodeToRemove = sibling;
+                                    sibling = sibling.nextSibling;
+                                    nodeToRemove.remove();
+                                }
+                                currentNodeToClearAfter = currentNodeToClearAfter.parentElement;
+                            }
+                            break;
+                        }
+                    }
+                    
+                    const previewContent = tempDiv.innerHTML;
+                    
+                    contentPreview.innerHTML = previewContent;
+                    contentPreview.classList.add('collapsed');
+                    expandBtn.style.display = 'flex';
+                    
+                    expandBtn.addEventListener('click', function() {
+                        const isExpanded = expandBtn.classList.contains('expanded');
+                        
+                        if (isExpanded) {
+                            contentPreview.innerHTML = previewContent;
+                            contentPreview.classList.add('collapsed');
+                            expandBtn.querySelector('.expand-text').textContent = '展开全文';
+                            expandBtn.classList.remove('expanded');
+                        } else {
+                            contentPreview.innerHTML = fullContent;
+                            contentPreview.classList.remove('collapsed');
+                            expandBtn.querySelector('.expand-text').textContent = '收起';
+                            expandBtn.classList.add('expanded');
+                        }
+                    });
+                } else {
+                    expandBtn.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
